@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    let url ="https://jsonplaceholder.typicode.com/todos/1";
+    fetch(url,{method:'GET'})
+    .then(res => res.json())
+    .then(resp => {
+        console.log(resp);
+        console.log("Title is: " + resp.title);
+    })
+    .catch(err => {console.log(err);
+    });
+
+</script>
+<body>
+    <h2>Ajax() Call using fetch Demo</h2>
+</body>
+</html>

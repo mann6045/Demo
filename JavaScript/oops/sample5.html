@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    class Person{
+        constructor(name){
+            this.name = name;
+        }
+        toString(){
+            return "Name is: " + this.name;
+        }
+    }
+    class Student extends Person{
+        constructor(name,id){
+            super(name);
+            this.id = id;
+        }
+
+        toString(){
+            return super.toString()+" Student Id is: " + this.id;
+        }
+    }
+    let s1 = new Student("MANN", 18);
+    console.log(s1.toString());
+
+</script>
+<body>
+    <h2>Inheritance Demo</h2>
+</body>
+</html>

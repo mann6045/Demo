@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <style> 
+        .siblings * { 
+            display: block; 
+            border: 2px solid lightgrey; 
+            color: lightgrey; 
+            padding: 5px; 
+            margin: 15px; 
+        } 
+    </style> 
+    <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> 
+  </script> 
+    <script> 
+        $(document).ready(function() { 
+            $("h2").siblings().css({ 
+                "color": "red", 
+                "border": "2px solid red" 
+            }); 
+            $("h2").parent().css({ 
+                "color": "green", 
+                "border": "2px solid blue" 
+            }); 
+            $("p").first().css( 
+              "background-color", "yellow"); 
+            $("p").has("span").css( 
+              "background-color", "indigo"); 
+  
+        }); 
+    </script> 
+</head> 
+  
+<body class="siblings"> 
+  
+    <div>GeeksforGeeks (parent) 
+        <p>GeeksforGeeks</p> 
+        <p><span>GeeksforGeeks</span></p> 
+        <h2>GeeksforGeeks</h2> 
+        <h3>GeeksforGeeks</h3> 
+        <p>GeeksforGeeks</p> 
+    </div> 
+  
+</body> 
+  
+</html> 

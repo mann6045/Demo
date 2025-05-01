@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    class Calculator{
+        add(a,b){
+            if(b == undefined){
+                return a + a;
+            }
+            return a + b;
+    }
+}
+    const calc = new Calculator();
+    console.log(calc.add(4));
+    console.log(calc.add(2,3));
+</script>
+<body>
+    <h2>Polymorphism by function overloading</h2>
+</body>
+</html>

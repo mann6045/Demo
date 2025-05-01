@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Name Validation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    .error {
+      color: red;
+    }
+    .success {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Enter Your Name</h2>
+  <input type="text" id="nameInput" placeholder="Enter your name">
+  <button onclick="validateName()">Submit</button>
+
+  <p id="message"></p>
+
+  <script>
+    function validateName() {
+      const name = document.getElementById("nameInput").value.trim();
+      const message = document.getElementById("message");
+      const nameRegex = /^[A-Za-z\s]+$/; // letters and spaces only
+
+      if (name === "") {
+        message.textContent = "Name cannot be empty.";
+        message.className = "error";
+      } else if (!nameRegex.test(name)) {
+        message.textContent = "Name can only contain letters and spaces.";
+        message.className = "error";
+      } else {
+        message.textContent = `Hello, ${name}!`;
+        message.className = "success";
+      }
+    }
+  </script>
+
+</body>
+</html>

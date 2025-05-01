@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function Car(){
+        console.log("Car Instance Created !!!");
+    }
+    Car.prototype.color = "Red";
+    Car.prototype.drive = function(){
+        console.log(`Driving the car printed in ${this.color}`);
+    }
+
+    console.log(`This car's color is: ${Car.prototype.color}`);
+    Car.prototype.drive();
+
+</script>
+<body>
+    <h2>Object Demo</h2>
+    <p>In JavaScript, Prototypes allow Proprrties and Method to be shared among instances of the function or Object</p>
+</body>
+</html>

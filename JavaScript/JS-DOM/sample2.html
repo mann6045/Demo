@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Manipulation</title>
+</head>
+<body>
+    <style>
+        .highlight{
+            color: red;
+            font-weight: bold;
+        }
+        .bold{
+            font-weight: bold;
+        }
+    </style>
+</body>
+<div id ="example" class="bold">
+    This is text element with bold class
+</div>
+<button onclick="addClass()">Add Highlight class</button>
+<button onclick="removeClass()">Remove bold</button>
+<button onclick="toggleClass()">Toggle Highlight</button>
+<script>
+    function addClass(){
+        document.getElementById("example").classList.add("highlight")
+    }
+    function removeClass(){
+        document.getElementById("example").classList.remove("highlight");
+    }
+    function toggleClass(){
+        document.getElementById("example").classList.toggle("highlight")
+    }
+</script>
+</html>
